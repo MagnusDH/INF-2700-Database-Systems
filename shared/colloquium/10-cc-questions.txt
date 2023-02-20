@@ -1,0 +1,16 @@
+1. Work on Question 4 of exam 2017.
+
+2. Transaction schedules:
+
+   Review the following transaction schedules, their purpose and problem.
+
+  * serializble
+  * recoverable
+  * cascadeless
+  * strict
+
+3. Discuss which serialization order is enforced by
+
+  * 2PL
+  * timestamp-based
+  * validation-based

@@ -1,0 +1,8 @@
+This week, we work on question 1 of the exam in 2016.
+
+In addition, we compare three file organization alternatives (with the
+same search key) in terms of dis space usage, search and insertion.
+
+  1. ordered file
+  2. B+ tree organized file
+  3. hash-organized file

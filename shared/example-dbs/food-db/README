@@ -1,0 +1,2 @@
+to create database, run
+sqlite3 food_db.sqlite3 < foods.sql

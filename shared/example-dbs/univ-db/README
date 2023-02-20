@@ -1,0 +1,7 @@
+to create db, run: sqlite3 univ-db.sqlite3 < univ-db-create.sql
+
+to pupolate db, run: sqlite3 univ-db.sqlite3 < univ-db-populate.sql
+
+to use the db, run sqlite3 univ-db.sqlite3
+
+useful sqlite3 commands: ".help", ".quit"
