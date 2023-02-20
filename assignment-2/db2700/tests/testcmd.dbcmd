@@ -1,0 +1,67 @@
+# test commands
+help
+
+oops, just try anything :)
+
+show database
+
+drop table # need a table
+drop table people;
+drop table clubs ;
+drop table in_club ;#
+
+show database
+
+# table schemas
+print ###test create table###
+create table people ( Pid int, name str[23], num_steps int );
+create table clubs (Cid int, name str[19]) ;
+create table in_club (Id int , Cid int, Pid int) ;
+create stranger;                              # create do not know stranger
+create table no_type_tbl (errfield, num int); # attr missing type
+create table wrong_type_tbl (afield any, num int);  # attr unknown type
+create table wrong_strtype_tbl (s str(5), num int); # wrong str type
+create table sep_err_tbl (a int; num int);          # wrong seperator
+
+show database
+show impossible
+
+# intended to be wrong
+# create table wrong_one (Id ind, name str[20], person_id int) ;
+
+# rows
+print ###test insert###
+insert into fake_tbl values ( 1, boy_1, 100018 ); # unknown
+insert into people values ( notint, boy_1, 100018 ); # must be int
+insert into people values ( 1, boy_1, 100018 );
+insert into people values (6, girl_3, 100457);
+insert into people values (35, man_4, 109265);
+insert into people values (54, woman_8, 109265);
+insert into clubs values (1, football);
+insert into clubs values (2, hack );
+insert into in_club values (1, 1, 1);
+insert into in_club values (2, 2, 1);
+
+show database
+
+print ###test select###
+select * where name = "me";                # no from
+select * afrom people;                     # no separate from
+select * fromclubs;                        # tricky incorrect from
+select * from non_existant;
+select none from people   ;                # non-existent attr
+select * from people where name = 10;      # name is not int field
+select name from people where name = "a";  # only int allowed
+select name * from people;                 # white space not allowed
+print select * from people;
+select * from people;
+print select * from in_club where Pid = 1;
+select * from in_club where Pid = 1;
+print select * from people where Pid = 35;
+select * from people where Pid = 35;
+print select   name ,   num_steps from people;
+select   name ,   num_steps from people;
+print select * from people natural join in_club;
+select * from people natural join in_club;
+
+quit

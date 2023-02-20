@@ -1,0 +1,13 @@
+A primitive SQL tester
+
+To compile:
+
+  make
+
+To run a test with the sample data:
+
+  ./testsql test test_queries_messages
+
+Before committing changes to git, run:
+
+  make clean
